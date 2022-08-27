@@ -1,5 +1,8 @@
 // An array of 0's and 1's is given to you; output should contain 0 on the right and 1 on the left
+
+// **************************
 // USING TWO POINTER APPROACH
+// **************************
 
 #include <iostream>
 #include <bits/stdc++.h>

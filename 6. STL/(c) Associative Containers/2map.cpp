@@ -7,7 +7,10 @@ using namespace std;
 
 int main()
 {
-    //  
+    // A D.S. in which our data is stored in the form of key-value pair
+    // All keys are unique
+    // One key will point to only one value
+    
     map<int, string> m;
 
     // HOW TO INSERT KEY-VALUE IN MAP
