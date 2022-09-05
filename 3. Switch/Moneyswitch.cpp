@@ -10,7 +10,8 @@ int main()
     cin >> amount;
     int Rs100, Rs50, Rs20, Rs1;
 
-    switch (1)        // don't put amount in the expression, push here 1 as we will start from 100 and then will move to next statements, so we need to remove break as well
+    switch (1)        // don't put amount in the expression, push here 1 as we will start from 100 
+                      // and then will move to next statements, so we need to remove break as well
     {
     case 1:
         Rs100 = amount / 100;

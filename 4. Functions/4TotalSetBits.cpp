@@ -5,6 +5,7 @@
 #include <math.h>
 
 using namespace std;
+
 int A(int a)
 {
     int count = 0;
@@ -15,7 +16,7 @@ int A(int a)
         {
             count++;
         }
-        a = a >> 1;
+        a = a >> 1; // Don't forget this
     }
     return count;
 }
@@ -39,7 +40,8 @@ int main()
 {
     int a, b;
     cin >> a >> b;
-    cout << A(a) + B(b);
+    
+    cout << "Total number of set bits: " << A(a) + B(b);
 
     return 0;
 }

@@ -9,7 +9,8 @@ int main()
     // BETTER SOLUTION
     int a[10];
 
-    fill_n(a, 10, 5); // fill_n(first, n, val); Assigns val to the first n elements of the sequence pointed by first.
+    fill_n(a, 10, 5); // fill_n(first, n, val); Assigns "val" to the first "n" elements of the sequence 
+                      // pointed by "first".
 
     for (int i = 0; i < 10; i++)
     {
