@@ -1,3 +1,7 @@
+// We selected one specific element in each iteration to sort it. This is the reason why this sorting 
+// algorithm is known as selection. In selection sort, with each iteration over the unsorted sublist, 
+// only one element is sorted.
+
 #include <iostream>
 #include <bits/stdc++.h>
 #include <math.h>
@@ -17,7 +21,7 @@ void selectionSort(vector<int> &arr, int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
-        int minIndex = i;
+        int minIndex = i; // pehle i ko hi maan lo ki woh minimum hai
 
         for (int j = i + 1; j < n; j++)
         {
