@@ -34,7 +34,7 @@ int main()
     // Linear search -> KEY wala
     // ONLY MONOTONIC FUNCTIONS
     // MIDDLE ELEMENT 
-    // IDHAR CODE AADHE SIZEE KA HO JAATA HAI TOH IT'S GOOD
+    // IDHAR CODE AADHE SIZE KA HO JAATA HAI TOH IT'S GOOD
     // O(logn)
     
     int even[4] = {1, 2, 3, 4};
