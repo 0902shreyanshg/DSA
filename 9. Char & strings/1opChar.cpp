@@ -19,7 +19,7 @@ int main()
 
     // i/p: Shreyansh Gautam
     // o/p: Shreyansh  
-    // BECAUSE cin DOESNOT EXECUTE SPACE, TAB (\t), NEWLINE, ENTER
+    // BECAUSE cin DOESNOT EXECUTE "SPACE", "TAB (\t)", "NEWLINE", "ENTER"
     cout << "Your name is ";
     cout << name << endl;
 

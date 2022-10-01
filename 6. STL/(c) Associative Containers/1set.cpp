@@ -28,6 +28,7 @@ int main()
     s.insert(7);
 
     // PRINTS IN SORTED ORDER AS IT IS A SET
+    cout << "Printing the (sorted ordered) set: " << endl;
     for (auto i : s) // UNDERSTAND THIS
     {
         cout << i << " ";

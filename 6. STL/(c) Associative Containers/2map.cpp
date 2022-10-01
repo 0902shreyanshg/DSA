@@ -9,7 +9,7 @@ int main()
 {
     // A D.S. in which our data is stored in the form of key-value pair
     // All keys are unique
-    // One key will point to only one value
+    // One key will point to only ONE value
     
     map<int, string> m;
 
