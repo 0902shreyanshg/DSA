@@ -4,14 +4,14 @@
 
 using namespace std;
 
-int pivot(int arr[], int n)
+int pivot(int arr[], int n) // Function likhte samay bracket mein daata structure define karenge bracket mein
 {
     int s = 0;
     int e = n - 1;
     int mid = s + (e - s) / 2;
 
     while (s < e) // We do this so that the condition of s = e does not occur in which it will again
-    // repeat the previous condition, TAE AN EXAMPLE TO KNOW WHAT IS HAPPENING
+    // repeat the previous condition, TAKE AN EXAMPLE TO KNOW WHAT IS HAPPENING
     {
         if (arr[mid] >= arr[0]) // Ist line
         {
@@ -32,7 +32,7 @@ int pivot(int arr[], int n)
 int main()
 {
     int arr[] = {3, 8, 10, 17, 1};
-    cout << pivot(arr, 5);
+    cout << pivot(arr, 5); // Function call karte samay se siirf function ka naam dalenge bracket mein 
 
     return 0;
 }

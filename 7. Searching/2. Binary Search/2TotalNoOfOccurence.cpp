@@ -14,7 +14,7 @@ int lastOcc(vector <int> arr, int n, int k){
     while(s <= e){
         if(arr[mid] == k){
             ans = mid;
-            s = mid + 1;
+            s = mid + 1; // Only change here (wrt Binary search)
         }
 
         else if(arr[mid] < k){
@@ -38,7 +38,7 @@ int firstOcc(vector <int> arr, int n, int k){
     while(s <= e){
         if(arr[mid] == k){
             ans = mid;
-            e = mid - 1;
+            e = mid - 1; // Only change here (wrt Binary search)
         }
 
         else if(arr[mid] < k){
@@ -60,6 +60,7 @@ int main()
     int first = firstOcc(arr, 10, 3);
     int last = lastOcc(arr, 10, 3);
 
+    // Total number of occurrences: 
     cout << "Answer is: " << last - first + 1;
 
     return 0;
