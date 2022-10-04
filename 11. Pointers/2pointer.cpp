@@ -21,13 +21,13 @@ int main()
     // address of operator - &
     cout << "address of num is: " << &num << endl;
 
-    int *ptr = &num;
+    int *ptr = &num; // num ka address ptr mein store kar diya
 
     //address of num using pointer (will give the same value)
-    cout << "address of num is: " << ptr << endl;
+    cout << "address of num is (using pointer): " << ptr << endl;
 
     // Both will print the same value
-    cout << "Value is: " << *ptr << endl;
+    cout << "Value is (using pointer): " << *ptr << endl;
     cout << "Value is: " << num << endl;
 
     // Printing size
