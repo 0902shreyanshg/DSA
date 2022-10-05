@@ -16,10 +16,10 @@ int main()
     // arr = arr + 1;
 
     int *ptr = &arr[0]; 
-    cout << ptr << endl;
+    cout << "Value of ptr: " << ptr << endl;
 
     ptr = ptr + 1;
-    cout << ptr << endl;
+    cout << "Value of ptr + 1: " << ptr << endl;
     
     return 0;
 }

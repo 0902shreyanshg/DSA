@@ -13,6 +13,7 @@ using namespace std;
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
+    
     // you need to give 6 because of null character; abcde accounts for 5
     char ch[6] = "abcde";
 
@@ -21,8 +22,8 @@ int main()
 
     char *c = &ch[0];
     // prints entire string
-    cout << c << endl;
-    cout << *c << endl;
+    cout << "c: " << c << endl;
+    cout << "*c: " << *c << endl;
 
 // ERROR
     // char temp = "z";

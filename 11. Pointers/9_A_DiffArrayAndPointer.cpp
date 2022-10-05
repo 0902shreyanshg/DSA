@@ -14,7 +14,7 @@ int main()
 
     cout << sizeof(temp) << endl;
     cout << sizeof(*temp) << endl; // size of 88 i.e. int
-    cout << sizeof(&temp) << endl << endl;
+    cout << sizeof(&temp) << endl << endl; // Size of address
 
     int *ptr = &temp[0];
     // Because your computer is a 32 bit computer the pointer size can be 4 bytes
@@ -23,7 +23,6 @@ int main()
     cout << "Size of *ptr: " << sizeof(*ptr) << endl; // memory allocated for int = 4
     cout << "Value of *ptr: " << *ptr << endl; 
     cout << "" << sizeof(&ptr) << endl;
-
 
     return 0;
 }

@@ -5,9 +5,9 @@
 #include <map>
 #include <set>
 #include <algorithm>
- 
+
 using namespace std;
- 
+
 int main()
 {
     // CASE 1:
@@ -27,10 +27,11 @@ int main()
 
     // CASE 3:
     int b = *p;
-    b++;
 
+    cout << "Value of b (Before): " << b << endl;
+    b++;
     cout << "Value of num: " <<  num << endl;
-    cout << "Value of b: " << b << endl;
+    cout << "Value of b (After): " << b << endl;
 
     return 0;
 }

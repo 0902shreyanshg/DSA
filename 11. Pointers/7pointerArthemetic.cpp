@@ -14,7 +14,7 @@ int main()
     int *t = &i;
     // cout << (*t)++ << endl;
     *t = *t + 1;
-    cout << *t << endl;
+    cout << "Value of *t + 1: " << *t << endl;
 
     cout << "Before t: " << t << endl;
     t = t + 1;

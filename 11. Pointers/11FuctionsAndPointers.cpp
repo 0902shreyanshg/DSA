@@ -5,7 +5,7 @@
 #include <map>
 #include <set>
 #include <algorithm>
- 
+
 using namespace std;
 
 void print(int *p){
