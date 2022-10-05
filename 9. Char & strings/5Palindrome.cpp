@@ -9,7 +9,7 @@
 using namespace std;
 
 // To convert Uppercase to lowercase
-char UppertoLower(char ch)
+char UppertoLower(char ch /* Not a character array, a single character */) 
 {
     if (ch >= 'a' && ch <= 'z')
     {

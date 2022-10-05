@@ -5,9 +5,9 @@
 #include <map>
 #include <set>
 #include <algorithm>
- 
+
 using namespace std;
- 
+
 int main()
 {
     char name[20];
