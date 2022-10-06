@@ -17,19 +17,18 @@ void print(int *p){
 
 void update(int *p){
     // p = p + 1;
-    // cout << "Inside; updated value: " << p << endl;
+    // there is no change with the above statement as value is passed with the 
+    // help of a pointer through the argument/function
+    // REFER pass by value
+    
     *p = *p + 1;
 }
     
-int main(int *p)
+int main()
 {
     int value = 5;
     int *p = &value;
 
-    // TF ???????????????????????????????????????????????
-    //  error: declaration of 'int* p' shadows a parameter
-    //  int *p = &value;
-    //       ^
     print(p);
 
     cout << "Before: " << p << endl;
