@@ -23,11 +23,16 @@ void update2(int& n){
 // num and ans are local variables
 // Jesse hi yeh block khatam hoga toh yeh memory clear ho jaayegi toh
 // ho sakta hai fer aap un memories ko access hi na kar paao
-// SAME IN CASE OF POINTERS
 int& func(int a){
     int num = a;
     int& ans = num;
     return ans;
+}
+
+// SAME IN CASE OF POINTERS (As above)
+int* fun(int n){
+    int *ptr = &n;
+    return ptr;
 }
 
 int main()
@@ -46,8 +51,11 @@ int main()
     update2(m);
     cout << "After: " << m << endl << endl;
 
-    // Will show Warning
+    // Will show Warning: reference to stack memory associated with local variable 'num' returned
     func(n);
+
+    // Will show warning: reference to stack memory associated with local variable 'num' returned
+    fun(n);
 
     return 0;
 }
