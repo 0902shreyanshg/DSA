@@ -5,7 +5,7 @@
 #include <map>
 #include <set>
 #include <algorithm>
- 
+
 using namespace std;
 
 void SayDigits(int n, string arr[]){
