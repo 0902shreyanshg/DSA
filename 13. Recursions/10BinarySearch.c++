@@ -5,7 +5,7 @@
 #include <map>
 #include <set>
 #include <algorithm>
- 
+
 using namespace std;
 
 void printArray(int arr[], int s, int e)

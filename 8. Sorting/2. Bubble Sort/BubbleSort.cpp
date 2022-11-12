@@ -46,7 +46,7 @@ int main()
     int n = arr.size();
 
     cout << endl
-         << "BEFORE using bubble sort: " << endl;
+        << "BEFORE using bubble sort: " << endl;
 
     for (auto i : arr)
     {
@@ -56,8 +56,8 @@ int main()
     bubbleSort(arr, n);
 
     cout << endl
-         << endl
-         << "AFTER using bubble sort: " << endl;
+        << endl
+        << "AFTER using bubble sort: " << endl;
 
     for (auto i : arr)
     {
