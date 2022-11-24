@@ -13,7 +13,7 @@ using namespace std;
 void merge(int *arr, int s, int e)
 {
     int mid = s + (e - s) / 2;
-    int len1 = mid - s - 1;
+    int len1 = mid - s + 1;
     int len2 = e - mid;
 
     // variable size ke array ke liye heap memory
@@ -49,23 +49,28 @@ void merge(int *arr, int s, int e)
         {
             arr[mainIndex++] = second[index2++];
         }
-
-        while (index1 < len1)
-        {
-            arr[mainIndex++] = first[index1++];
-        }
-
-        while (index2 < len2)
-        {
-            arr[mainIndex++] = second[index2++];
-        }
     }
+
+    // jab kisi ke length zyaada ho doosre se
+    while (index1 < len1)
+    {
+        arr[mainIndex++] = first[index1++];
+    }
+
+    while (index2 < len2)
+    {
+        arr[mainIndex++] = second[index2++];
+    }
+
+    delete []first;
+    delete []second;
 }
 
+// Basically, pehle bass single elements mein divide karna hai aur uske baad saara khel shuru hai
+// i.e. merging woh bhi ordered.
 void mergeSort(int *arr, int s, int e)
 {
-
-    // base case {for arrays}
+    // base case {for arrays} i.e. for a single element or jab start aage nikal gaya end ke
     if (s >= e)
     {
         return;
@@ -85,7 +90,7 @@ void mergeSort(int *arr, int s, int e)
 int main()
 {
     int arr[15] = {3, 7, 6, 5, 3, 2, 8, 9, 74, 45, 25, 35, 46, 12, 23};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n = 15;
 
     mergeSort(arr, 0, n - 1);
 
