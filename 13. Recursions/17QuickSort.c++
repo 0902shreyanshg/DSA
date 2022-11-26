@@ -57,8 +57,8 @@ void quickSort(int *arr, int s, int e)
     int p = partition(arr, s, e);
 
     // Recursive call
-    quickSort(arr, s, p - 1);
-    quickSort(arr, p + 1, e);
+    quickSort(arr, s, p - 1); // left part sort 
+    quickSort(arr, p + 1, e); // right part sort
 }
 
 int main()
