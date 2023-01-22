@@ -9,17 +9,21 @@
 using namespace std;
 
 char MaxOccuringChar(string s){
-    int arr[26] = {0};
+    
+    // Representing 26 alphabets occurrence 
+    int arr[26] = {0}; 
 
     for(int i = 0; i < s.length(); i++){
+        // taking characters out of string
         char ch = s[i];
 
         // lowercase
-        int number = 0;
-        number = ch - 'a';
+        int number = 0; 
+        number = ch - 'a'; // assigning index to the character in the array arr
         arr[number]++;
     }
 
+    // comparing all the character's occurrences recorded in the array
     int maxi = -1, ans = 0;
     for(int i = 0; i < 26; i++){
         if(maxi < arr[i]){
@@ -27,6 +31,7 @@ char MaxOccuringChar(string s){
             maxi = arr[i];
         }
     }
+    
     // char finalAns = 'a' + ans;
     return 'a' + ans;
 }

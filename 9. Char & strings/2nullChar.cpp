@@ -14,6 +14,11 @@ int main()
     cout << "Enter your name: " << endl;
     cin >> name;
 
+    // name[2] = '\0';
+    // cin >> name;
+
+    // op: full name will print as it will override
+
     // null character
     name[2] = '\0';
 

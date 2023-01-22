@@ -43,6 +43,7 @@ bool checkPalindrome(char name[], int n)
     {
         if (UppertoLower(name[s]) == UppertoLower(name[e]))
         {
+            // return 1 yaha nahi aayega because poore name mein palindrome check karna hai, 1-2 char mein nahi
             s++;
             e--;
         }

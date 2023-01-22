@@ -8,16 +8,8 @@
 
 using namespace std;
 
-void reverse(char name[], int n)
-{
-    int s = 0;
-    int e = n - 1;
-
-    while (s < e)
-    {
-        swap(name[s++], name[e--]);
-    }
-}
+//! SAME AS "8ReverseArray" in Arrays folder
+// TODO: "Reverse a integer" in Notion, bit manipulation
 
 int getLength(char name[])
 {
@@ -27,6 +19,17 @@ int getLength(char name[])
         count++;
     }
     return count;
+}
+
+void reverse(char name[], int n)
+{
+    int s = 0;
+    int e = n - 1;
+
+    while (s <= e)
+    {
+        swap(name[s++], name[e--]);
+    }
 }
 
 int main()
