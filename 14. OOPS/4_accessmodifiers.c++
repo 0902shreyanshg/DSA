@@ -41,6 +41,7 @@ class Hero {
 int main()
 {
     Hero Shreyansh;
+    cout << "Size of Shreyansh: " << sizeof(Shreyansh) << endl; 
 
     // Shreyansh.health = 100;
     //TODO Using setter
@@ -48,6 +49,7 @@ int main()
 
     Shreyansh.level = 'A';
 
+    //TODO Using getter
     cout << "Health is :" << Shreyansh.getHealth() << endl;
     cout << "Level is :" << Shreyansh.level << endl;
     return 0;
