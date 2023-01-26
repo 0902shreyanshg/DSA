@@ -15,11 +15,13 @@ class Hero {
     int health;
 
     public:
+    char *name; // better practise than statically allocating here
     char level;
 
     // Making our own constructor
     Hero() {
         cout << "Simple constructor called" << endl;
+        name = new char[100];
     }
 
     // Parameterized constructor
@@ -40,6 +42,13 @@ class Hero {
     //! COPY CONSTRUCTOR (OUR OWN)
     //********************************************************************
     Hero(Hero& temp){
+
+        //? DEEP COPY 
+        //? Making a new array
+        char *ch = new char[strlen(temp.name) + 1];  // +1 is for null character
+        strcpy(ch, temp.name);
+        this -> name = ch;
+
         cout << "Mera copy constructor called: " << endl;
         this -> health = temp.health;
         this -> level = temp.level;
@@ -47,8 +56,10 @@ class Hero {
     //********************************************************************
 
     void print() {
-        cout << "Health " << this -> health << endl;
-        cout << level << endl;
+        cout << endl;
+        cout << "Name: " << this -> name << endl;
+        cout << "Health: " << this -> health << endl;
+        cout << "Level: " << level << endl;
     }
 
     int getHealth() {
@@ -66,19 +77,34 @@ class Hero {
     void setLevel(char ch) {
         level = ch;
     }
+
+    void setName(char name[]) {
+        strcpy(this -> name, name);
+    }
 };
 
 int main()
 {
-    Hero suresh(70, 'C');
-    suresh.print();
+    Hero hero1;
 
-    // copy constructor
-    Hero ramesh(suresh);
-    ramesh.print();
+    hero1.setHealth(12);
+    hero1.setLevel('D');
+    char name[7] = "Riseb";
+    hero1.setName(name);
 
-    //? Since, we have made our own copy constructor above,
-    //? so the in-built copy constructor does not exist any more
+    Hero hero2(hero1);
+    
+    hero1.name[0] = 'G';
+    hero1.print();
+
+    // also printing hero2
+    hero2.print();
+
+    // COPY ASSIGNMENT OPERATOR
+    hero1 = hero2;
+
+    hero1.print();
+    hero2.print();
 
     return 0;
 }

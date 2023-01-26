@@ -15,11 +15,13 @@ class Hero {
     int health;
 
     public:
+    char *name; // better practise than statically allocating here
     char level;
 
     // Making our own constructor
     Hero() {
         cout << "Simple constructor called" << endl;
+        name = new char[100];
     }
 
     // Parameterized constructor
@@ -37,18 +39,11 @@ class Hero {
     }
     //********************************************************************
 
-    //! COPY CONSTRUCTOR (OUR OWN)
-    //********************************************************************
-    Hero(Hero& temp){
-        cout << "Mera copy constructor called: " << endl;
-        this -> health = temp.health;
-        this -> level = temp.level;
-    }
-    //********************************************************************
-
     void print() {
-        cout << "Health " << this -> health << endl;
-        cout << level << endl;
+        cout << endl;
+        cout << "Name: " << this -> name << endl;
+        cout << "Health: " << this -> health << endl;
+        cout << "Level: " << level << endl;
     }
 
     int getHealth() {
@@ -66,19 +61,39 @@ class Hero {
     void setLevel(char ch) {
         level = ch;
     }
+
+    void setName(char name[]) {
+        strcpy(this -> name, name);
+    }
 };
 
 int main()
 {
-    Hero suresh(70, 'C');
-    suresh.print();
+    Hero hero1;
 
-    // copy constructor
-    Hero ramesh(suresh);
-    ramesh.print();
+    hero1.setHealth(12);
+    hero1.setLevel('D');
+    char name[7] = "Riseb";
+    hero1.setName(name);
 
-    //? Since, we have made our own copy constructor above,
-    //? so the in-built copy constructor does not exist any more
+    hero1.print();
+
+    // using default copy constructor
+
+    Hero hero2(hero1);
+    // Hero hero2 = hero1
+    hero2.print();   
+
+    // Changing the name of hero1
+    hero1.name[0] = 'G';
+    hero1.print();
+
+    // also printing hero2
+    hero2.print();
+
+    //? hero2 also changes
+    //? default copy constructor shallow copy karta hai i.e. 
+    //? joh copy kiya hai hero2 uss mein name ka address copy hua hai.
 
     return 0;
 }
