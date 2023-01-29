@@ -12,11 +12,22 @@ class Node {
     public:
     int data;
     Node* next;
+
+    // Constructor
+    Node(int data) {
+        this -> data = data;
+        this -> next = NULL;
+    }
 };
 
 int main()
 {
     // creating object in heap
-    Node* node1 = new Node();
+    Node* node1 = new Node(10);
+
+    // Pointer hai toh arrow use hoga
+    cout << node1 -> data << endl;
+    cout << node1 -> next << endl;
+    
     return 0;
 }
