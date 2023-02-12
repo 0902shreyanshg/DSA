@@ -68,7 +68,7 @@ void merge(int *arr, int s, int e)
 
 // Basically, pehle bass single elements mein divide karna hai aur uske baad saara khel shuru hai
 // i.e. merging woh bhi ordered.
-void mergeSort(int *arr, int s, int e)
+void mergeSort(int *arr, int s, int e) //! by reference in order to change the contents of the array
 {
     // base case {for arrays} i.e. for a single element or jab start aage nikal gaya end ke
     if (s >= e)
@@ -77,23 +77,27 @@ void mergeSort(int *arr, int s, int e)
     }
     int mid = s + (e - s) / 2;
 
+    // DIVISION
+
     // left part
     mergeSort(arr, s, mid);
 
     // right part
     mergeSort(arr, mid + 1, e);
 
-    // merging the arrays
+    // merging the arrays 
+    // AFTER they have been divided into single elements i.e. after recursive calls
     merge(arr, s, e);
 }
 
 int main()
 {
     int arr[15] = {3, 7, 6, 5, 3, 2, 8, 9, 74, 45, 25, 35, 46, 12, 23};
-    int n = 15;
+    int n = sizeof(arr)/sizeof(arr[0]);
 
     mergeSort(arr, 0, n - 1);
 
+    // printing sorted array after calling mergeSort()
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";

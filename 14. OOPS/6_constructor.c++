@@ -53,6 +53,7 @@ int main()
 
     //! Here the default constructor will get removed automatically as
     //! we have created our own constructor
+
     // Static allocation
     cout << "Mota billa " << endl;
     Hero ramesh;
