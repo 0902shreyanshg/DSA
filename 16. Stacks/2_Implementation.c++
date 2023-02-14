@@ -42,14 +42,57 @@ public:
     }
 
     int peek() {
+        if(top >= 0) {
+            return arr[top];
+        }
+        else {
+            cout << "Stack is Empty " << endl;
+            return -1;
+        }
     }
 
     bool isEmpty() {
+        if(top == -1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 };
 
 int main()
 {
+    Stack st(5);
+
+    st.push(22);
+    st.push(43);
+    st.push(44);
+    st.push(22);
+    st.push(43);
+    // stack overflow wali condition
+    st.push(44); 
+    cout << st.peek() << endl;
+
+    st.pop();
+    cout << st.peek() << endl;
+
+    st.pop();
+    cout << st.peek() << endl;
+
+    st.pop();
+    cout << st.peek() << endl;
+
+    st.pop();
+    cout << st.peek() << endl;
+
+    // stack is empty wali condition
+    st.pop();
+    cout << st.peek() << endl;
+
+    // stack underflow wali condition
+    st.pop();
+    cout << st.peek() << endl;
 
     return 0;
 }
