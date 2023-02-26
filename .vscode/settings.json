@@ -34,5 +34,6 @@
   },
   "cSpell.words": [
     "Occuring"
-  ]
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false
 }
