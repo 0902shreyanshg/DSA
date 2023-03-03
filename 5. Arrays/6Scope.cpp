@@ -28,7 +28,7 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl
-         << endl;
+        << endl;
 
     // SECOND PRINT
     cout << "SECOND PRINT:" << endl;
@@ -36,7 +36,7 @@ int main()
 
     // THIRD PRINT
     cout << endl
-         << "THIRD PRINT:" << endl;
+        << "THIRD PRINT:" << endl;
     cout << "Original array in main function after calling update function: ";
     for (int i = 0; i < 3; i++)
     {

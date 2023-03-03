@@ -19,7 +19,10 @@ void reverse(int arr[], int n)
     int end = n - 1;
     while (start <= end)
     {
-        swap(arr[start], arr[end]); // HERE ARRAY VALUES HAVE TO BE SWAPPED NOT THE ARRAY POSITIONS
+        //swap(arr[start++], arr[end--]); // HERE ARRAY VALUES HAVE TO BE SWAPPED NOT THE ARRAY POSITIONS
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
         start++;
         end--;
     }
